@@ -4,10 +4,10 @@
 // 	protoc        v3.21.12
 // source: alis/open/notifications/v1/devices.proto
 
-package v1
+package notifications
 
 import (
-	v12 "github.com/alis-build/public-go/alis/open/iam/v1"
+	iam "github.com/alis-build/public-go/alis/open/iam"
 	v1 "github.com/alis-build/public-go/alis/open/validation/v1"
 	v11 "google.golang.org/genproto/googleapis/iam/v1"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -449,7 +449,7 @@ const file_alis_open_notifications_v1_devices_proto_rawDesc = "" +
 	"\x0eRegisterDevice\x121.alis.open.notifications.v1.RegisterDeviceRequest\x1a2.alis.open.notifications.v1.RegisterDeviceResponse\"\x00\x12_\n" +
 	"\tGetDevice\x12,.alis.open.notifications.v1.GetDeviceRequest\x1a\".alis.open.notifications.v1.Device\"\x00\x12p\n" +
 	"\vListDevices\x12..alis.open.notifications.v1.ListDevicesRequest\x1a/.alis.open.notifications.v1.ListDevicesResponse\"\x00\x12Y\n" +
-	"\fDeleteDevice\x12/.alis.open.notifications.v1.DeleteDeviceRequest\x1a\x16.google.protobuf.Empty\"\x00B<Z:github.com/alis-build/public-go/alis/open/notifications/v1b\x06proto3"
+	"\fDeleteDevice\x12/.alis.open.notifications.v1.DeleteDeviceRequest\x1a\x16.google.protobuf.Empty\"\x00B9Z7github.com/alis-build/public-go/alis/open/notificationsb\x06proto3"
 
 var (
 	file_alis_open_notifications_v1_devices_proto_rawDescOnce sync.Once
@@ -479,8 +479,8 @@ var file_alis_open_notifications_v1_devices_proto_goTypes = []any{
 	(*v11.GetIamPolicyRequest)(nil),        // 11: google.iam.v1.GetIamPolicyRequest
 	(*v11.SetIamPolicyRequest)(nil),        // 12: google.iam.v1.SetIamPolicyRequest
 	(*v11.TestIamPermissionsRequest)(nil),  // 13: google.iam.v1.TestIamPermissionsRequest
-	(*v12.AddIamBindingsRequest)(nil),      // 14: alis.open.iam.v1.AddIamBindingsRequest
-	(*v12.RemoveIamBindingsRequest)(nil),   // 15: alis.open.iam.v1.RemoveIamBindingsRequest
+	(*iam.AddIamBindingsRequest)(nil),      // 14: alis.open.iam.v1.AddIamBindingsRequest
+	(*iam.RemoveIamBindingsRequest)(nil),   // 15: alis.open.iam.v1.RemoveIamBindingsRequest
 	(*v1.ValidateMessageResponse)(nil),     // 16: alis.open.validation.v1.ValidateMessageResponse
 	(*v1.RetrieveRulesResponse)(nil),       // 17: alis.open.validation.v1.RetrieveRulesResponse
 	(*v11.Policy)(nil),                     // 18: google.iam.v1.Policy

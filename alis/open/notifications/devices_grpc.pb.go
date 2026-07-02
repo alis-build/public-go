@@ -4,11 +4,11 @@
 // - protoc             v3.21.12
 // source: alis/open/notifications/v1/devices.proto
 
-package v1
+package notifications
 
 import (
 	context "context"
-	v12 "github.com/alis-build/public-go/alis/open/iam/v1"
+	iam "github.com/alis-build/public-go/alis/open/iam"
 	v1 "github.com/alis-build/public-go/alis/open/validation/v1"
 	v11 "google.golang.org/genproto/googleapis/iam/v1"
 	grpc "google.golang.org/grpc"
@@ -45,8 +45,8 @@ type DevicesServiceClient interface {
 	GetIamPolicy(ctx context.Context, in *v11.GetIamPolicyRequest, opts ...grpc.CallOption) (*v11.Policy, error)
 	SetIamPolicy(ctx context.Context, in *v11.SetIamPolicyRequest, opts ...grpc.CallOption) (*v11.Policy, error)
 	TestIamPermissions(ctx context.Context, in *v11.TestIamPermissionsRequest, opts ...grpc.CallOption) (*v11.TestIamPermissionsResponse, error)
-	AddIamBindings(ctx context.Context, in *v12.AddIamBindingsRequest, opts ...grpc.CallOption) (*v11.Policy, error)
-	RemoveIamBindings(ctx context.Context, in *v12.RemoveIamBindingsRequest, opts ...grpc.CallOption) (*v11.Policy, error)
+	AddIamBindings(ctx context.Context, in *iam.AddIamBindingsRequest, opts ...grpc.CallOption) (*v11.Policy, error)
+	RemoveIamBindings(ctx context.Context, in *iam.RemoveIamBindingsRequest, opts ...grpc.CallOption) (*v11.Policy, error)
 	RegisterDevice(ctx context.Context, in *RegisterDeviceRequest, opts ...grpc.CallOption) (*RegisterDeviceResponse, error)
 	GetDevice(ctx context.Context, in *GetDeviceRequest, opts ...grpc.CallOption) (*Device, error)
 	ListDevices(ctx context.Context, in *ListDevicesRequest, opts ...grpc.CallOption) (*ListDevicesResponse, error)
@@ -111,7 +111,7 @@ func (c *devicesServiceClient) TestIamPermissions(ctx context.Context, in *v11.T
 	return out, nil
 }
 
-func (c *devicesServiceClient) AddIamBindings(ctx context.Context, in *v12.AddIamBindingsRequest, opts ...grpc.CallOption) (*v11.Policy, error) {
+func (c *devicesServiceClient) AddIamBindings(ctx context.Context, in *iam.AddIamBindingsRequest, opts ...grpc.CallOption) (*v11.Policy, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(v11.Policy)
 	err := c.cc.Invoke(ctx, DevicesService_AddIamBindings_FullMethodName, in, out, cOpts...)
@@ -121,7 +121,7 @@ func (c *devicesServiceClient) AddIamBindings(ctx context.Context, in *v12.AddIa
 	return out, nil
 }
 
-func (c *devicesServiceClient) RemoveIamBindings(ctx context.Context, in *v12.RemoveIamBindingsRequest, opts ...grpc.CallOption) (*v11.Policy, error) {
+func (c *devicesServiceClient) RemoveIamBindings(ctx context.Context, in *iam.RemoveIamBindingsRequest, opts ...grpc.CallOption) (*v11.Policy, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
 	out := new(v11.Policy)
 	err := c.cc.Invoke(ctx, DevicesService_RemoveIamBindings_FullMethodName, in, out, cOpts...)
@@ -180,8 +180,8 @@ type DevicesServiceServer interface {
 	GetIamPolicy(context.Context, *v11.GetIamPolicyRequest) (*v11.Policy, error)
 	SetIamPolicy(context.Context, *v11.SetIamPolicyRequest) (*v11.Policy, error)
 	TestIamPermissions(context.Context, *v11.TestIamPermissionsRequest) (*v11.TestIamPermissionsResponse, error)
-	AddIamBindings(context.Context, *v12.AddIamBindingsRequest) (*v11.Policy, error)
-	RemoveIamBindings(context.Context, *v12.RemoveIamBindingsRequest) (*v11.Policy, error)
+	AddIamBindings(context.Context, *iam.AddIamBindingsRequest) (*v11.Policy, error)
+	RemoveIamBindings(context.Context, *iam.RemoveIamBindingsRequest) (*v11.Policy, error)
 	RegisterDevice(context.Context, *RegisterDeviceRequest) (*RegisterDeviceResponse, error)
 	GetDevice(context.Context, *GetDeviceRequest) (*Device, error)
 	ListDevices(context.Context, *ListDevicesRequest) (*ListDevicesResponse, error)
@@ -211,10 +211,10 @@ func (UnimplementedDevicesServiceServer) SetIamPolicy(context.Context, *v11.SetI
 func (UnimplementedDevicesServiceServer) TestIamPermissions(context.Context, *v11.TestIamPermissionsRequest) (*v11.TestIamPermissionsResponse, error) {
 	return nil, status.Error(codes.Unimplemented, "method TestIamPermissions not implemented")
 }
-func (UnimplementedDevicesServiceServer) AddIamBindings(context.Context, *v12.AddIamBindingsRequest) (*v11.Policy, error) {
+func (UnimplementedDevicesServiceServer) AddIamBindings(context.Context, *iam.AddIamBindingsRequest) (*v11.Policy, error) {
 	return nil, status.Error(codes.Unimplemented, "method AddIamBindings not implemented")
 }
-func (UnimplementedDevicesServiceServer) RemoveIamBindings(context.Context, *v12.RemoveIamBindingsRequest) (*v11.Policy, error) {
+func (UnimplementedDevicesServiceServer) RemoveIamBindings(context.Context, *iam.RemoveIamBindingsRequest) (*v11.Policy, error) {
 	return nil, status.Error(codes.Unimplemented, "method RemoveIamBindings not implemented")
 }
 func (UnimplementedDevicesServiceServer) RegisterDevice(context.Context, *RegisterDeviceRequest) (*RegisterDeviceResponse, error) {
@@ -341,7 +341,7 @@ func _DevicesService_TestIamPermissions_Handler(srv interface{}, ctx context.Con
 }
 
 func _DevicesService_AddIamBindings_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(v12.AddIamBindingsRequest)
+	in := new(iam.AddIamBindingsRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -353,13 +353,13 @@ func _DevicesService_AddIamBindings_Handler(srv interface{}, ctx context.Context
 		FullMethod: DevicesService_AddIamBindings_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(DevicesServiceServer).AddIamBindings(ctx, req.(*v12.AddIamBindingsRequest))
+		return srv.(DevicesServiceServer).AddIamBindings(ctx, req.(*iam.AddIamBindingsRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
 func _DevicesService_RemoveIamBindings_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(v12.RemoveIamBindingsRequest)
+	in := new(iam.RemoveIamBindingsRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -371,7 +371,7 @@ func _DevicesService_RemoveIamBindings_Handler(srv interface{}, ctx context.Cont
 		FullMethod: DevicesService_RemoveIamBindings_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(DevicesServiceServer).RemoveIamBindings(ctx, req.(*v12.RemoveIamBindingsRequest))
+		return srv.(DevicesServiceServer).RemoveIamBindings(ctx, req.(*iam.RemoveIamBindingsRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }

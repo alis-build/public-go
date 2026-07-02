@@ -4,7 +4,7 @@
 // 	protoc        v3.21.12
 // source: alis/open/notifications/v1/notifications.proto
 
-package v1
+package notifications
 
 import (
 	v1 "github.com/alis-build/public-go/alis/open/validation/v1"
@@ -290,7 +290,7 @@ const file_alis_open_notifications_v1_notifications_proto_rawDesc = "" +
 	"\rRetrieveRules\x12-.alis.open.validation.v1.RetrieveRulesRequest\x1a..alis.open.validation.v1.RetrieveRulesResponse\"\x00\x12k\n" +
 	"\x12TestIamPermissions\x12(.google.iam.v1.TestIamPermissionsRequest\x1a).google.iam.v1.TestIamPermissionsResponse\"\x00\x12y\n" +
 	"\x0eSendFcmMessage\x121.alis.open.notifications.v1.SendFcmMessageRequest\x1a2.alis.open.notifications.v1.SendFcmMessageResponse\"\x00\x12\x8b\x01\n" +
-	"\x14BatchSendFcmMessages\x127.alis.open.notifications.v1.BatchSendFcmMessagesRequest\x1a8.alis.open.notifications.v1.BatchSendFcmMessagesResponse\"\x00B<Z:github.com/alis-build/public-go/alis/open/notifications/v1b\x06proto3"
+	"\x14BatchSendFcmMessages\x127.alis.open.notifications.v1.BatchSendFcmMessagesRequest\x1a8.alis.open.notifications.v1.BatchSendFcmMessagesResponse\"\x00B9Z7github.com/alis-build/public-go/alis/open/notificationsb\x06proto3"
 
 var (
 	file_alis_open_notifications_v1_notifications_proto_rawDescOnce sync.Once

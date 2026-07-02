@@ -4,7 +4,7 @@
 // - protoc             v3.21.12
 // source: alis/open/notifications/v1/notifications.proto
 
-package v1
+package notifications
 
 import (
 	context "context"
