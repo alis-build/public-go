@@ -4,7 +4,7 @@
 // 	protoc        v3.21.12
 // source: alis/open/operations/v1/operations.proto
 
-package v1
+package operations
 
 import (
 	status "google.golang.org/genproto/googleapis/rpc/status"
@@ -308,7 +308,7 @@ const file_alis_open_operations_v1_operations_proto_rawDesc = "" +
 	"\vtarget_host\x18\x05 \x01(\tR\n" +
 	"targetHostB\b\n" +
 	"\x06resultB\b\n" +
-	"\x06runnerJ\x04\b\a\x10\bJ\x04\b\b\x10\tB9Z7github.com/alis-build/public-go/alis/open/operations/v1b\x06proto3"
+	"\x06runnerJ\x04\b\a\x10\bJ\x04\b\b\x10\tB6Z4github.com/alis-build/public-go/alis/open/operationsb\x06proto3"
 
 var (
 	file_alis_open_operations_v1_operations_proto_rawDescOnce sync.Once

@@ -3,8 +3,8 @@
 // Source: alis/open/operations/v1/operations.proto
 // Plugin version: v0.0.1
 //
-// Generated on: 2026-06-24 12:06:04 UTC
+// Generated on: 2026-07-02 09:33:10 UTC
 
-package v1
+package operations
 
 const ()
