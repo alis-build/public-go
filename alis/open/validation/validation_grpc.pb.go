@@ -4,7 +4,7 @@
 // - protoc             v3.21.12
 // source: alis/open/validation/v1/validation.proto
 
-package v1
+package validation
 
 import (
 	context "context"

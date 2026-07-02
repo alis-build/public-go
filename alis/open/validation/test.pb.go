@@ -4,7 +4,7 @@
 // 	protoc        v3.21.12
 // source: alis/open/validation/v1/test.proto
 
-package v1
+package validation
 
 import (
 	date "google.golang.org/genproto/googleapis/type/date"
@@ -529,7 +529,7 @@ const file_alis_open_validation_v1_test_proto_rawDesc = "" +
 	"UpdateBook\x12*.alis.open.validation.v1.UpdateBookRequest\x1a\x1d.alis.open.validation.v1.Book\"\x00\x12R\n" +
 	"\n" +
 	"DeleteBook\x12*.alis.open.validation.v1.DeleteBookRequest\x1a\x16.google.protobuf.Empty\"\x00\x12d\n" +
-	"\tListBooks\x12).alis.open.validation.v1.ListBooksRequest\x1a*.alis.open.validation.v1.ListBooksResponse\"\x00B9Z7github.com/alis-build/public-go/alis/open/validation/v1b\x06proto3"
+	"\tListBooks\x12).alis.open.validation.v1.ListBooksRequest\x1a*.alis.open.validation.v1.ListBooksResponse\"\x00B6Z4github.com/alis-build/public-go/alis/open/validationb\x06proto3"
 
 var (
 	file_alis_open_validation_v1_test_proto_rawDescOnce sync.Once

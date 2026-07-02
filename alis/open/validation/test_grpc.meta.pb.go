@@ -3,9 +3,9 @@
 // Source: alis/open/validation/v1/test.proto
 // Plugin version: v0.0.1
 //
-// Generated on: 2026-06-24 12:03:12 UTC
+// Generated on: 2026-07-02 09:34:38 UTC
 
-package v1
+package validation
 
 const (
 	// BookService_GetBook_FullMethodDescription returns the description of the alis.open.validation.v1.BookService.GetBook method.
