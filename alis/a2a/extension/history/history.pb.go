@@ -4,7 +4,7 @@
 // 	protoc        v3.21.12
 // source: alis/a2a/extension/history/v1/history.proto
 
-package v1
+package history
 
 import (
 	v1 "github.com/a2aproject/a2a-go/v2/a2apb/v1"
@@ -1154,7 +1154,7 @@ const file_alis_a2a_extension_history_v1_history_proto_rawDesc = "" +
 	"\x12GetUserThreadState\x128.alis.a2a.extension.history.v1.GetUserThreadStateRequest\x1a..alis.a2a.extension.history.v1.UserThreadState\"\x00\x12\x86\x01\n" +
 	"\x15UpdateUserThreadState\x12;.alis.a2a.extension.history.v1.UpdateUserThreadStateRequest\x1a..alis.a2a.extension.history.v1.UserThreadState\"\x00\x12\x85\x01\n" +
 	"\x10ListThreadEvents\x126.alis.a2a.extension.history.v1.ListThreadEventsRequest\x1a7.alis.a2a.extension.history.v1.ListThreadEventsResponse\"\x00\x12~\n" +
-	"\x12StreamThreadEvents\x128.alis.a2a.extension.history.v1.StreamThreadEventsRequest\x1a*.alis.a2a.extension.history.v1.ThreadEvent\"\x000\x01B?Z=github.com/alis-build/public-go/alis/a2a/extension/history/v1b\x06proto3"
+	"\x12StreamThreadEvents\x128.alis.a2a.extension.history.v1.StreamThreadEventsRequest\x1a*.alis.a2a.extension.history.v1.ThreadEvent\"\x000\x01B<Z:github.com/alis-build/public-go/alis/a2a/extension/historyb\x06proto3"
 
 var (
 	file_alis_a2a_extension_history_v1_history_proto_rawDescOnce sync.Once
