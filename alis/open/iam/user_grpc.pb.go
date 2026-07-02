@@ -8,8 +8,8 @@ package iam
 
 import (
 	context "context"
-	v1 "github.com/alis-build/public-go/alis/open/validation/v1"
-	v11 "google.golang.org/genproto/googleapis/iam/v1"
+	validation "github.com/alis-build/public-go/alis/open/validation"
+	v1 "google.golang.org/genproto/googleapis/iam/v1"
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
@@ -53,13 +53,13 @@ const (
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type UsersServiceClient interface {
-	ValidateMessage(ctx context.Context, in *v1.ValidateMessageRequest, opts ...grpc.CallOption) (*v1.ValidateMessageResponse, error)
-	RetrieveRules(ctx context.Context, in *v1.RetrieveRulesRequest, opts ...grpc.CallOption) (*v1.RetrieveRulesResponse, error)
-	GetIamPolicy(ctx context.Context, in *v11.GetIamPolicyRequest, opts ...grpc.CallOption) (*v11.Policy, error)
-	SetIamPolicy(ctx context.Context, in *v11.SetIamPolicyRequest, opts ...grpc.CallOption) (*v11.Policy, error)
-	TestIamPermissions(ctx context.Context, in *v11.TestIamPermissionsRequest, opts ...grpc.CallOption) (*v11.TestIamPermissionsResponse, error)
-	AddIamBindings(ctx context.Context, in *AddIamBindingsRequest, opts ...grpc.CallOption) (*v11.Policy, error)
-	RemoveIamBindings(ctx context.Context, in *RemoveIamBindingsRequest, opts ...grpc.CallOption) (*v11.Policy, error)
+	ValidateMessage(ctx context.Context, in *validation.ValidateMessageRequest, opts ...grpc.CallOption) (*validation.ValidateMessageResponse, error)
+	RetrieveRules(ctx context.Context, in *validation.RetrieveRulesRequest, opts ...grpc.CallOption) (*validation.RetrieveRulesResponse, error)
+	GetIamPolicy(ctx context.Context, in *v1.GetIamPolicyRequest, opts ...grpc.CallOption) (*v1.Policy, error)
+	SetIamPolicy(ctx context.Context, in *v1.SetIamPolicyRequest, opts ...grpc.CallOption) (*v1.Policy, error)
+	TestIamPermissions(ctx context.Context, in *v1.TestIamPermissionsRequest, opts ...grpc.CallOption) (*v1.TestIamPermissionsResponse, error)
+	AddIamBindings(ctx context.Context, in *AddIamBindingsRequest, opts ...grpc.CallOption) (*v1.Policy, error)
+	RemoveIamBindings(ctx context.Context, in *RemoveIamBindingsRequest, opts ...grpc.CallOption) (*v1.Policy, error)
 	GetUser(ctx context.Context, in *GetUserRequest, opts ...grpc.CallOption) (*User, error)
 	CreateUser(ctx context.Context, in *CreateUserRequest, opts ...grpc.CallOption) (*User, error)
 	UpdateUser(ctx context.Context, in *UpdateUserRequest, opts ...grpc.CallOption) (*User, error)
@@ -88,9 +88,9 @@ func NewUsersServiceClient(cc grpc.ClientConnInterface) UsersServiceClient {
 	return &usersServiceClient{cc}
 }
 
-func (c *usersServiceClient) ValidateMessage(ctx context.Context, in *v1.ValidateMessageRequest, opts ...grpc.CallOption) (*v1.ValidateMessageResponse, error) {
+func (c *usersServiceClient) ValidateMessage(ctx context.Context, in *validation.ValidateMessageRequest, opts ...grpc.CallOption) (*validation.ValidateMessageResponse, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
-	out := new(v1.ValidateMessageResponse)
+	out := new(validation.ValidateMessageResponse)
 	err := c.cc.Invoke(ctx, UsersService_ValidateMessage_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
@@ -98,9 +98,9 @@ func (c *usersServiceClient) ValidateMessage(ctx context.Context, in *v1.Validat
 	return out, nil
 }
 
-func (c *usersServiceClient) RetrieveRules(ctx context.Context, in *v1.RetrieveRulesRequest, opts ...grpc.CallOption) (*v1.RetrieveRulesResponse, error) {
+func (c *usersServiceClient) RetrieveRules(ctx context.Context, in *validation.RetrieveRulesRequest, opts ...grpc.CallOption) (*validation.RetrieveRulesResponse, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
-	out := new(v1.RetrieveRulesResponse)
+	out := new(validation.RetrieveRulesResponse)
 	err := c.cc.Invoke(ctx, UsersService_RetrieveRules_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
@@ -108,9 +108,9 @@ func (c *usersServiceClient) RetrieveRules(ctx context.Context, in *v1.RetrieveR
 	return out, nil
 }
 
-func (c *usersServiceClient) GetIamPolicy(ctx context.Context, in *v11.GetIamPolicyRequest, opts ...grpc.CallOption) (*v11.Policy, error) {
+func (c *usersServiceClient) GetIamPolicy(ctx context.Context, in *v1.GetIamPolicyRequest, opts ...grpc.CallOption) (*v1.Policy, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
-	out := new(v11.Policy)
+	out := new(v1.Policy)
 	err := c.cc.Invoke(ctx, UsersService_GetIamPolicy_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
@@ -118,9 +118,9 @@ func (c *usersServiceClient) GetIamPolicy(ctx context.Context, in *v11.GetIamPol
 	return out, nil
 }
 
-func (c *usersServiceClient) SetIamPolicy(ctx context.Context, in *v11.SetIamPolicyRequest, opts ...grpc.CallOption) (*v11.Policy, error) {
+func (c *usersServiceClient) SetIamPolicy(ctx context.Context, in *v1.SetIamPolicyRequest, opts ...grpc.CallOption) (*v1.Policy, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
-	out := new(v11.Policy)
+	out := new(v1.Policy)
 	err := c.cc.Invoke(ctx, UsersService_SetIamPolicy_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
@@ -128,9 +128,9 @@ func (c *usersServiceClient) SetIamPolicy(ctx context.Context, in *v11.SetIamPol
 	return out, nil
 }
 
-func (c *usersServiceClient) TestIamPermissions(ctx context.Context, in *v11.TestIamPermissionsRequest, opts ...grpc.CallOption) (*v11.TestIamPermissionsResponse, error) {
+func (c *usersServiceClient) TestIamPermissions(ctx context.Context, in *v1.TestIamPermissionsRequest, opts ...grpc.CallOption) (*v1.TestIamPermissionsResponse, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
-	out := new(v11.TestIamPermissionsResponse)
+	out := new(v1.TestIamPermissionsResponse)
 	err := c.cc.Invoke(ctx, UsersService_TestIamPermissions_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
@@ -138,9 +138,9 @@ func (c *usersServiceClient) TestIamPermissions(ctx context.Context, in *v11.Tes
 	return out, nil
 }
 
-func (c *usersServiceClient) AddIamBindings(ctx context.Context, in *AddIamBindingsRequest, opts ...grpc.CallOption) (*v11.Policy, error) {
+func (c *usersServiceClient) AddIamBindings(ctx context.Context, in *AddIamBindingsRequest, opts ...grpc.CallOption) (*v1.Policy, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
-	out := new(v11.Policy)
+	out := new(v1.Policy)
 	err := c.cc.Invoke(ctx, UsersService_AddIamBindings_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
@@ -148,9 +148,9 @@ func (c *usersServiceClient) AddIamBindings(ctx context.Context, in *AddIamBindi
 	return out, nil
 }
 
-func (c *usersServiceClient) RemoveIamBindings(ctx context.Context, in *RemoveIamBindingsRequest, opts ...grpc.CallOption) (*v11.Policy, error) {
+func (c *usersServiceClient) RemoveIamBindings(ctx context.Context, in *RemoveIamBindingsRequest, opts ...grpc.CallOption) (*v1.Policy, error) {
 	cOpts := append([]grpc.CallOption{grpc.StaticMethod()}, opts...)
-	out := new(v11.Policy)
+	out := new(v1.Policy)
 	err := c.cc.Invoke(ctx, UsersService_RemoveIamBindings_FullMethodName, in, out, cOpts...)
 	if err != nil {
 		return nil, err
@@ -342,13 +342,13 @@ func (c *usersServiceClient) SetUserPicture(ctx context.Context, in *SetUserPict
 // All implementations must embed UnimplementedUsersServiceServer
 // for forward compatibility.
 type UsersServiceServer interface {
-	ValidateMessage(context.Context, *v1.ValidateMessageRequest) (*v1.ValidateMessageResponse, error)
-	RetrieveRules(context.Context, *v1.RetrieveRulesRequest) (*v1.RetrieveRulesResponse, error)
-	GetIamPolicy(context.Context, *v11.GetIamPolicyRequest) (*v11.Policy, error)
-	SetIamPolicy(context.Context, *v11.SetIamPolicyRequest) (*v11.Policy, error)
-	TestIamPermissions(context.Context, *v11.TestIamPermissionsRequest) (*v11.TestIamPermissionsResponse, error)
-	AddIamBindings(context.Context, *AddIamBindingsRequest) (*v11.Policy, error)
-	RemoveIamBindings(context.Context, *RemoveIamBindingsRequest) (*v11.Policy, error)
+	ValidateMessage(context.Context, *validation.ValidateMessageRequest) (*validation.ValidateMessageResponse, error)
+	RetrieveRules(context.Context, *validation.RetrieveRulesRequest) (*validation.RetrieveRulesResponse, error)
+	GetIamPolicy(context.Context, *v1.GetIamPolicyRequest) (*v1.Policy, error)
+	SetIamPolicy(context.Context, *v1.SetIamPolicyRequest) (*v1.Policy, error)
+	TestIamPermissions(context.Context, *v1.TestIamPermissionsRequest) (*v1.TestIamPermissionsResponse, error)
+	AddIamBindings(context.Context, *AddIamBindingsRequest) (*v1.Policy, error)
+	RemoveIamBindings(context.Context, *RemoveIamBindingsRequest) (*v1.Policy, error)
 	GetUser(context.Context, *GetUserRequest) (*User, error)
 	CreateUser(context.Context, *CreateUserRequest) (*User, error)
 	UpdateUser(context.Context, *UpdateUserRequest) (*User, error)
@@ -377,25 +377,25 @@ type UsersServiceServer interface {
 // pointer dereference when methods are called.
 type UnimplementedUsersServiceServer struct{}
 
-func (UnimplementedUsersServiceServer) ValidateMessage(context.Context, *v1.ValidateMessageRequest) (*v1.ValidateMessageResponse, error) {
+func (UnimplementedUsersServiceServer) ValidateMessage(context.Context, *validation.ValidateMessageRequest) (*validation.ValidateMessageResponse, error) {
 	return nil, status.Error(codes.Unimplemented, "method ValidateMessage not implemented")
 }
-func (UnimplementedUsersServiceServer) RetrieveRules(context.Context, *v1.RetrieveRulesRequest) (*v1.RetrieveRulesResponse, error) {
+func (UnimplementedUsersServiceServer) RetrieveRules(context.Context, *validation.RetrieveRulesRequest) (*validation.RetrieveRulesResponse, error) {
 	return nil, status.Error(codes.Unimplemented, "method RetrieveRules not implemented")
 }
-func (UnimplementedUsersServiceServer) GetIamPolicy(context.Context, *v11.GetIamPolicyRequest) (*v11.Policy, error) {
+func (UnimplementedUsersServiceServer) GetIamPolicy(context.Context, *v1.GetIamPolicyRequest) (*v1.Policy, error) {
 	return nil, status.Error(codes.Unimplemented, "method GetIamPolicy not implemented")
 }
-func (UnimplementedUsersServiceServer) SetIamPolicy(context.Context, *v11.SetIamPolicyRequest) (*v11.Policy, error) {
+func (UnimplementedUsersServiceServer) SetIamPolicy(context.Context, *v1.SetIamPolicyRequest) (*v1.Policy, error) {
 	return nil, status.Error(codes.Unimplemented, "method SetIamPolicy not implemented")
 }
-func (UnimplementedUsersServiceServer) TestIamPermissions(context.Context, *v11.TestIamPermissionsRequest) (*v11.TestIamPermissionsResponse, error) {
+func (UnimplementedUsersServiceServer) TestIamPermissions(context.Context, *v1.TestIamPermissionsRequest) (*v1.TestIamPermissionsResponse, error) {
 	return nil, status.Error(codes.Unimplemented, "method TestIamPermissions not implemented")
 }
-func (UnimplementedUsersServiceServer) AddIamBindings(context.Context, *AddIamBindingsRequest) (*v11.Policy, error) {
+func (UnimplementedUsersServiceServer) AddIamBindings(context.Context, *AddIamBindingsRequest) (*v1.Policy, error) {
 	return nil, status.Error(codes.Unimplemented, "method AddIamBindings not implemented")
 }
-func (UnimplementedUsersServiceServer) RemoveIamBindings(context.Context, *RemoveIamBindingsRequest) (*v11.Policy, error) {
+func (UnimplementedUsersServiceServer) RemoveIamBindings(context.Context, *RemoveIamBindingsRequest) (*v1.Policy, error) {
 	return nil, status.Error(codes.Unimplemented, "method RemoveIamBindings not implemented")
 }
 func (UnimplementedUsersServiceServer) GetUser(context.Context, *GetUserRequest) (*User, error) {
@@ -474,7 +474,7 @@ func RegisterUsersServiceServer(s grpc.ServiceRegistrar, srv UsersServiceServer)
 }
 
 func _UsersService_ValidateMessage_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(v1.ValidateMessageRequest)
+	in := new(validation.ValidateMessageRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -486,13 +486,13 @@ func _UsersService_ValidateMessage_Handler(srv interface{}, ctx context.Context,
 		FullMethod: UsersService_ValidateMessage_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(UsersServiceServer).ValidateMessage(ctx, req.(*v1.ValidateMessageRequest))
+		return srv.(UsersServiceServer).ValidateMessage(ctx, req.(*validation.ValidateMessageRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
 func _UsersService_RetrieveRules_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(v1.RetrieveRulesRequest)
+	in := new(validation.RetrieveRulesRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -504,13 +504,13 @@ func _UsersService_RetrieveRules_Handler(srv interface{}, ctx context.Context, d
 		FullMethod: UsersService_RetrieveRules_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(UsersServiceServer).RetrieveRules(ctx, req.(*v1.RetrieveRulesRequest))
+		return srv.(UsersServiceServer).RetrieveRules(ctx, req.(*validation.RetrieveRulesRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
 func _UsersService_GetIamPolicy_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(v11.GetIamPolicyRequest)
+	in := new(v1.GetIamPolicyRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -522,13 +522,13 @@ func _UsersService_GetIamPolicy_Handler(srv interface{}, ctx context.Context, de
 		FullMethod: UsersService_GetIamPolicy_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(UsersServiceServer).GetIamPolicy(ctx, req.(*v11.GetIamPolicyRequest))
+		return srv.(UsersServiceServer).GetIamPolicy(ctx, req.(*v1.GetIamPolicyRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
 func _UsersService_SetIamPolicy_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(v11.SetIamPolicyRequest)
+	in := new(v1.SetIamPolicyRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -540,13 +540,13 @@ func _UsersService_SetIamPolicy_Handler(srv interface{}, ctx context.Context, de
 		FullMethod: UsersService_SetIamPolicy_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(UsersServiceServer).SetIamPolicy(ctx, req.(*v11.SetIamPolicyRequest))
+		return srv.(UsersServiceServer).SetIamPolicy(ctx, req.(*v1.SetIamPolicyRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
 func _UsersService_TestIamPermissions_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(v11.TestIamPermissionsRequest)
+	in := new(v1.TestIamPermissionsRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -558,7 +558,7 @@ func _UsersService_TestIamPermissions_Handler(srv interface{}, ctx context.Conte
 		FullMethod: UsersService_TestIamPermissions_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(UsersServiceServer).TestIamPermissions(ctx, req.(*v11.TestIamPermissionsRequest))
+		return srv.(UsersServiceServer).TestIamPermissions(ctx, req.(*v1.TestIamPermissionsRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
