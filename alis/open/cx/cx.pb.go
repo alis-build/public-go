@@ -4,7 +4,7 @@
 // 	protoc        v3.21.12
 // source: alis/open/cx/v1/cx.proto
 
-package v1
+package cx
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -2236,7 +2236,7 @@ const file_alis_open_cx_v1_cx_proto_rawDesc = "" +
 	"\n" +
 	"\x06GLOBAL\x10\x01\x12\n" +
 	"\n" +
-	"\x06CUSTOM\x10\x02B1Z/github.com/alis-build/public-go/alis/open/cx/v1b\x06proto3"
+	"\x06CUSTOM\x10\x02B.Z,github.com/alis-build/public-go/alis/open/cxb\x06proto3"
 
 var (
 	file_alis_open_cx_v1_cx_proto_rawDescOnce sync.Once

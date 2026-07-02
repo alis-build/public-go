@@ -3,8 +3,8 @@
 // Source: alis/open/cx/v1/cx.proto
 // Plugin version: v0.0.1
 //
-// Generated on: 2026-06-24 12:06:56 UTC
+// Generated on: 2026-07-02 09:30:30 UTC
 
-package v1
+package cx
 
 const ()
