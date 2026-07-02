@@ -4,7 +4,7 @@
 // 	protoc        v3.21.12
 // source: alis/open/iam/v1/user.proto
 
-package v1
+package iam
 
 import (
 	v1 "github.com/alis-build/public-go/alis/open/validation/v1"
@@ -2367,7 +2367,7 @@ const file_alis_open_iam_v1_user_proto_rawDesc = "" +
 	"\x0eEditMyMetadata\x12'.alis.open.iam.v1.EditMyMetadataRequest\x1a\x16.alis.open.iam.v1.User\"\x00\x12O\n" +
 	"\fRemoveMyUser\x12%.alis.open.iam.v1.RemoveMyUserRequest\x1a\x16.google.protobuf.Empty\"\x00\x12n\n" +
 	"\x11SyncToGoogleGroup\x12*.alis.open.iam.v1.SyncToGoogleGroupRequest\x1a+.alis.open.iam.v1.SyncToGoogleGroupResponse\"\x00\x12e\n" +
-	"\x0eSetUserPicture\x12'.alis.open.iam.v1.SetUserPictureRequest\x1a(.alis.open.iam.v1.SetUserPictureResponse\"\x00B2Z0github.com/alis-build/public-go/alis/open/iam/v1b\x06proto3"
+	"\x0eSetUserPicture\x12'.alis.open.iam.v1.SetUserPictureRequest\x1a(.alis.open.iam.v1.SetUserPictureResponse\"\x00B/Z-github.com/alis-build/public-go/alis/open/iamb\x06proto3"
 
 var (
 	file_alis_open_iam_v1_user_proto_rawDescOnce sync.Once

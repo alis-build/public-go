@@ -4,7 +4,7 @@
 // 	protoc        v3.21.12
 // source: alis/open/iam/v1/iam.proto
 
-package v1
+package iam
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -322,7 +322,7 @@ const file_alis_open_iam_v1_iam_proto_rawDesc = "" +
 	"\x14resource_permissions\x18\x01 \x03(\v2E.alis.open.iam.v1.BatchTestIamPermissionsResponse.ResourcePermissionsR\x13resourcePermissions\x1aS\n" +
 	"\x13ResourcePermissions\x12\x1a\n" +
 	"\bresource\x18\x01 \x01(\tR\bresource\x12 \n" +
-	"\vpermissions\x18\x02 \x03(\tR\vpermissionsB2Z0github.com/alis-build/public-go/alis/open/iam/v1b\x06proto3"
+	"\vpermissions\x18\x02 \x03(\tR\vpermissionsB/Z-github.com/alis-build/public-go/alis/open/iamb\x06proto3"
 
 var (
 	file_alis_open_iam_v1_iam_proto_rawDescOnce sync.Once

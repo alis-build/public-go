@@ -4,7 +4,7 @@
 // 	protoc        v3.21.12
 // source: alis/open/iam/v1/group.proto
 
-package v1
+package iam
 
 import (
 	v1 "google.golang.org/genproto/googleapis/iam/v1"
@@ -541,7 +541,7 @@ const file_alis_open_iam_v1_group_proto_rawDesc = "" +
 	"\vDeleteGroup\x12$.alis.open.iam.v1.DeleteGroupRequest\x1a\x16.google.protobuf.Empty\"\x00\x12Y\n" +
 	"\n" +
 	"ListGroups\x12#.alis.open.iam.v1.ListGroupsRequest\x1a$.alis.open.iam.v1.ListGroupsResponse\"\x00\x12V\n" +
-	"\tSyncGroup\x12\".alis.open.iam.v1.SyncGroupRequest\x1a#.alis.open.iam.v1.SyncGroupResponse\"\x00B2Z0github.com/alis-build/public-go/alis/open/iam/v1b\x06proto3"
+	"\tSyncGroup\x12\".alis.open.iam.v1.SyncGroupRequest\x1a#.alis.open.iam.v1.SyncGroupResponse\"\x00B/Z-github.com/alis-build/public-go/alis/open/iamb\x06proto3"
 
 var (
 	file_alis_open_iam_v1_group_proto_rawDescOnce sync.Once

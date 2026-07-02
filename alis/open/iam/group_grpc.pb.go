@@ -4,7 +4,7 @@
 // - protoc             v3.21.12
 // source: alis/open/iam/v1/group.proto
 
-package v1
+package iam
 
 import (
 	context "context"
