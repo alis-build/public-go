@@ -4,7 +4,7 @@
 // 	protoc        v3.21.12
 // source: alis/open/pubsub/v1/pubsub.proto
 
-package v1
+package pubsub
 
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
@@ -188,7 +188,7 @@ const file_alis_open_pubsub_v1_pubsub_proto_rawDesc = "" +
 	"\rpublish_time1\x18\a \x01(\v2\x1a.google.protobuf.TimestampR\fpublishTime1\x1a=\n" +
 	"\x0fAttributesEntry\x12\x10\n" +
 	"\x03key\x18\x01 \x01(\tR\x03key\x12\x14\n" +
-	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B5Z3github.com/alis-build/public-go/alis/open/pubsub/v1b\x06proto3"
+	"\x05value\x18\x02 \x01(\tR\x05value:\x028\x01B2Z0github.com/alis-build/public-go/alis/open/pubsubb\x06proto3"
 
 var (
 	file_alis_open_pubsub_v1_pubsub_proto_rawDescOnce sync.Once
