@@ -4,7 +4,7 @@
 // 	protoc        v3.21.12
 // source: alis/open/px/v1/px.proto
 
-package v1
+package px
 
 import (
 	date "google.golang.org/genproto/googleapis/type/date"
@@ -2797,7 +2797,7 @@ const file_alis_open_px_v1_px_proto_rawDesc = "" +
 	"\aALIS_IN\x10\x06\x12\v\n" +
 	"\aALIS_PX\x10\a\x12\f\n" +
 	"\bREZCO_FA\x10\b\x12\x0f\n" +
-	"\vMORNINGSTAR\x10\tB1Z/github.com/alis-build/public-go/alis/open/px/v1b\x06proto3"
+	"\vMORNINGSTAR\x10\tB.Z,github.com/alis-build/public-go/alis/open/pxb\x06proto3"
 
 var (
 	file_alis_open_px_v1_px_proto_rawDescOnce sync.Once
