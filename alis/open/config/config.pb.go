@@ -4,7 +4,7 @@
 // 	protoc        v3.21.12
 // source: alis/open/config/v1/config.proto
 
-package v1
+package config
 
 import (
 	v1 "github.com/alis-build/public-go/alis/open/iam/v1"
@@ -109,7 +109,7 @@ const file_alis_open_config_v1_config_proto_rawDesc = "" +
 	"\n" +
 	"project_id\x18\x03 \x01(\tR\tprojectId\x12%\n" +
 	"\x0eproject_number\x18\x04 \x01(\tR\rprojectNumber\x12,\n" +
-	"\x05roles\x18\x05 \x03(\v2\x16.alis.open.iam.v1.RoleR\x05rolesB5Z3github.com/alis-build/public-go/alis/open/config/v1b\x06proto3"
+	"\x05roles\x18\x05 \x03(\v2\x16.alis.open.iam.v1.RoleR\x05rolesB2Z0github.com/alis-build/public-go/alis/open/configb\x06proto3"
 
 var (
 	file_alis_open_config_v1_config_proto_rawDescOnce sync.Once
