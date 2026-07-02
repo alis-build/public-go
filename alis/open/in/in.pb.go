@@ -4,10 +4,10 @@
 // 	protoc        v3.21.12
 // source: alis/open/in/v1/in.proto
 
-package v1
+package in
 
 import (
-	v11 "github.com/alis-build/public-go/alis/open/cx/v1"
+	cx "github.com/alis-build/public-go/alis/open/cx"
 	v1 "github.com/alis-build/public-go/alis/open/px/v1"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
@@ -911,7 +911,7 @@ func (x *Instrument_ExchangeIdentifiers) GetMorningstarExchangeCode() string {
 type Instrument_Engines struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	Px            *v1.Instrument         `protobuf:"bytes,1,opt,name=px,proto3" json:"px,omitempty"`
-	Cx            *v11.Instrument        `protobuf:"bytes,2,opt,name=cx,proto3" json:"cx,omitempty"`
+	Cx            *cx.Instrument         `protobuf:"bytes,2,opt,name=cx,proto3" json:"cx,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -953,7 +953,7 @@ func (x *Instrument_Engines) GetPx() *v1.Instrument {
 	return nil
 }
 
-func (x *Instrument_Engines) GetCx() *v11.Instrument {
+func (x *Instrument_Engines) GetCx() *cx.Instrument {
 	if x != nil {
 		return x.Cx
 	}
@@ -1148,7 +1148,7 @@ const file_alis_open_in_v1_in_proto_rawDesc = "" +
 	"\n" +
 	"\x06ACTIVE\x10\x01\x12\f\n" +
 	"\bARCHIVED\x10\x02\x12\t\n" +
-	"\x05STALE\x10\x03B1Z/github.com/alis-build/public-go/alis/open/in/v1b\x06proto3"
+	"\x05STALE\x10\x03B.Z,github.com/alis-build/public-go/alis/open/inb\x06proto3"
 
 var (
 	file_alis_open_in_v1_in_proto_rawDescOnce sync.Once
@@ -1179,7 +1179,7 @@ var file_alis_open_in_v1_in_proto_goTypes = []any{
 	(*Instrument_SourceMetaData)(nil),      // 11: alis.open.in.v1.Instrument.SourceMetaData
 	(*timestamppb.Timestamp)(nil),          // 12: google.protobuf.Timestamp
 	(*v1.Instrument)(nil),                  // 13: alis.open.px.v1.Instrument
-	(*v11.Instrument)(nil),                 // 14: alis.open.cx.v1.Instrument
+	(*cx.Instrument)(nil),                  // 14: alis.open.cx.v1.Instrument
 }
 var file_alis_open_in_v1_in_proto_depIdxs = []int32{
 	0,  // 0: alis.open.in.v1.Instrument.figi_type:type_name -> alis.open.in.v1.FigiType
