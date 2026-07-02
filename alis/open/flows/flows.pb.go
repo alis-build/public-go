@@ -4,7 +4,7 @@
 // 	protoc        v3.21.12
 // source: alis/open/flows/v1/flows.proto
 
-package v1
+package flows
 
 import (
 	v1 "github.com/alis-build/public-go/alis/open/pubsub/v1"
@@ -743,7 +743,7 @@ const file_alis_open_flows_v1_flows_proto_rawDesc = "" +
 	"\vStreamFlows\x12&.alis.open.flows.v1.StreamFlowsRequest\x1a\x18.alis.open.flows.v1.Flow\"\x000\x01\x12o\n" +
 	"\x10GenerateFlowTree\x12+.alis.open.flows.v1.GenerateFlowTreeRequest\x1a,.alis.open.flows.v1.GenerateFlowTreeResponse\"\x00\x12K\n" +
 	"\vHandleEvent\x12\".alis.open.pubsub.v1.PubSubMessage\x1a\x16.google.protobuf.Empty\"\x00\x12P\n" +
-	"\x10HandleDeadLetter\x12\".alis.open.pubsub.v1.PubSubMessage\x1a\x16.google.protobuf.Empty\"\x00B4Z2github.com/alis-build/public-go/alis/open/flows/v1b\x06proto3"
+	"\x10HandleDeadLetter\x12\".alis.open.pubsub.v1.PubSubMessage\x1a\x16.google.protobuf.Empty\"\x00B1Z/github.com/alis-build/public-go/alis/open/flowsb\x06proto3"
 
 var (
 	file_alis_open_flows_v1_flows_proto_rawDescOnce sync.Once

@@ -4,7 +4,7 @@
 // - protoc             v3.21.12
 // source: alis/open/flows/v1/flows.proto
 
-package v1
+package flows
 
 import (
 	context "context"

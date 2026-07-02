@@ -3,9 +3,9 @@
 // Source: alis/open/flows/v1/flows.proto
 // Plugin version: v0.0.1
 //
-// Generated on: 2026-06-24 12:08:13 UTC
+// Generated on: 2026-07-02 09:30:53 UTC
 
-package v1
+package flows
 
 const (
 	// FlowsService_GetFlow_FullMethodDescription returns the description of the alis.open.flows.v1.FlowsService.GetFlow method.
