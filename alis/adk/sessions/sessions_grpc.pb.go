@@ -4,7 +4,7 @@
 // - protoc             v3.21.12
 // source: alis/adk/sessions/v1/sessions.proto
 
-package v1
+package sessions
 
 import (
 	context "context"

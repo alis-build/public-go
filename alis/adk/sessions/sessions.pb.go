@@ -4,7 +4,7 @@
 // 	protoc        v3.21.12
 // source: alis/adk/sessions/v1/sessions.proto
 
-package v1
+package sessions
 
 import (
 	date "google.golang.org/genproto/googleapis/type/date"
@@ -4239,7 +4239,7 @@ const file_alis_adk_sessions_v1_sessions_proto_rawDesc = "" +
 	"\bGetEvent\x12%.alis.adk.sessions.v1.GetEventRequest\x1a\".alis.adk.sessions.v1.SessionEvent\x12_\n" +
 	"\n" +
 	"ListEvents\x12'.alis.adk.sessions.v1.ListEventsRequest\x1a(.alis.adk.sessions.v1.ListEventsResponse\x12b\n" +
-	"\vAppendEvent\x12(.alis.adk.sessions.v1.AppendEventRequest\x1a).alis.adk.sessions.v1.AppendEventResponseB6Z4github.com/alis-build/public-go/alis/adk/sessions/v1b\x06proto3"
+	"\vAppendEvent\x12(.alis.adk.sessions.v1.AppendEventRequest\x1a).alis.adk.sessions.v1.AppendEventResponseB3Z1github.com/alis-build/public-go/alis/adk/sessionsb\x06proto3"
 
 var (
 	file_alis_adk_sessions_v1_sessions_proto_rawDescOnce sync.Once

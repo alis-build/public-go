@@ -3,9 +3,9 @@
 // Source: alis/adk/sessions/v1/sessions.proto
 // Plugin version: v0.0.1
 //
-// Generated on: 2026-06-24 12:01:22 UTC
+// Generated on: 2026-07-02 09:25:15 UTC
 
-package v1
+package sessions
 
 const (
 	// SessionService_CreateSession_FullMethodDescription returns the description of the alis.adk.sessions.v1.SessionService.CreateSession method.
