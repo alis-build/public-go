@@ -4,7 +4,7 @@
 // - protoc             v3.21.12
 // source: alis/a2a/extension/scheduler/v1/scheduler.proto
 
-package v1
+package scheduler
 
 import (
 	context "context"
