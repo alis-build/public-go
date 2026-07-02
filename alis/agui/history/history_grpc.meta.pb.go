@@ -3,9 +3,9 @@
 // Source: alis/agui/history/v1/history.proto
 // Plugin version: v0.0.1
 //
-// Generated on: 2026-06-24 12:02:24 UTC
+// Generated on: 2026-07-02 09:25:52 UTC
 
-package v1
+package history
 
 const (
 	// ThreadService_GetIamPolicy_FullMethodDescription returns the description of the alis.agui.history.v1.ThreadService.GetIamPolicy method.

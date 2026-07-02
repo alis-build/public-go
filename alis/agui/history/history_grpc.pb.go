@@ -4,7 +4,7 @@
 // - protoc             v3.21.12
 // source: alis/agui/history/v1/history.proto
 
-package v1
+package history
 
 import (
 	context "context"
