@@ -3,9 +3,9 @@
 // Source: alis/open/agent/v1/agent.proto
 // Plugin version: v0.0.1
 //
-// Generated on: 2026-06-24 12:09:14 UTC
+// Generated on: 2026-07-02 09:29:19 UTC
 
-package v1
+package agent
 
 const (
 	// A2AService_SendMessage_FullMethodDescription returns the description of the alis.open.agent.v1.A2AService.SendMessage method.

@@ -4,7 +4,7 @@
 // - protoc             v3.21.12
 // source: alis/open/agent/v1/agent.proto
 
-package v1
+package agent
 
 import (
 	context "context"
